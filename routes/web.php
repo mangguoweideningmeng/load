@@ -14,8 +14,11 @@
 Route::get('/', function () {
     return view('welcome');
 });
-Route::get('/user/reg','LoginController@reg');//注册
-Route::post('/user/regdo','LoginController@regdo');//注册
-Route::get('/user/login','LoginController@login');//登录
-Route::post('/user/logindo','LoginController@logindo');//登录
+
 Route::get('/user/create','LoginController@create');//登录
+Route::prefix('user')->group(function(){
+    Route::get('/reg','LoginController@reg');//注册
+    Route::post('/regdo','LoginController@regdo');//注册
+    Route::get('/login','LoginController@login');//登录
+    Route::post('/logindo','LoginController@logindo');//登录
+});
