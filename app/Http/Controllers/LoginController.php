@@ -43,13 +43,18 @@ class LoginController extends Controller
         }
         if (password_verify($password,$res['password'])){
             header('Refresh:2,url=/user/create');
-            echo "登录成功";exit;
+            session(['res'=>$res]);
+            echo "登录成功";
         }else{
             header('Refresh:2,url=/user/login');
             echo "用户名密码错误";exit;
         }
     }
     public function create(){
-        echo "个人中心";
+        $user=session('res');
+        $id=$user['id'];
+        $users=RegModel::where('id',$id)->first();
+        echo "欢迎";echo $users['name'];
+
     }
 }

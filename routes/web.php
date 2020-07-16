@@ -15,7 +15,7 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/user/create','LoginController@create');//登录
+Route::get('/user/create','LoginController@create')->middleware('login');//登录
 Route::prefix('user')->group(function(){
     Route::get('/reg','LoginController@reg');//注册
     Route::post('/regdo','LoginController@regdo');//注册
