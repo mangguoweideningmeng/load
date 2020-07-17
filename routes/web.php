@@ -22,3 +22,5 @@ Route::prefix('user')->group(function(){
     Route::get('/login','LoginController@login');//登录
     Route::post('/logindo','LoginController@logindo');//登录
 });
+
+Route::get('/test','TestController@test');//注册
