@@ -11,7 +11,7 @@
 <center><h2>欢迎登录</h2><a href="/user/reg">注册</a></center><hr/>
 
 <form action="{{url('/user/logindo')}}" method="post" class="form-horizontal" role="form">
-    @csrf
+    
     <div class="form-group">
         <label for="firstname" class="col-sm-2 control-label">用户名</label>
         <div class="col-sm-8">

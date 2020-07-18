@@ -11,7 +11,7 @@
 ​<center><h2>用户注册</h2></center>
 
 <form class="form-horizontal" role="form" action="{{url('/user/regdo')}}" method='post' enctype="multipart/form-data">
-    @csrf
+ 
     <div class="form-group">
         <label for="firstname" class="col-sm-2 control-label">用户名</label>
         <div class="col-sm-8">
