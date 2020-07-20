@@ -12,4 +12,7 @@ class TestController extends Controller
         $val1='zhangsan';
         Redis::set();
     }
+    public function lisi(){
+        echo '1111';
+    }
 }
