@@ -24,4 +24,7 @@ Route::prefix('user')->group(function(){
 });
 
 Route::get('/test','TestController@test');//注册
+
 Route::get('/zhangsan','TestController@zhangsan');//注册
+Route::get('/lisi','TestController@lisi');//注册
+
